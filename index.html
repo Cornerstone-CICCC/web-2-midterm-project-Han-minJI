@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/f2b584664c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container" id="container-top">
+      <!-- header -->
+      <header>
+        <div class="logo">
+          <a href="#container-top">
+            <h2>Real Time</h2>
+          </a>
+          <img src="./src/assets/svg/logo-icon.svg" class="logo-icon" />
+        </div>
+
+        <nav>
+          <menu>
+            <li><a href="#about" id="about-btn">About</a></li>
+            <li><a href="#movies" id="movies-btn">Movies</a></li>
+            <li><a href="#tv-shows" id="tvshows-btn">Tv Shows</a></li>
+          </menu>
+        </nav>
+
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-box"
+            placeholder="Enter name, genre.."
+          />
+          <div class="btn-clear"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+
+        <div class="search-user">
+          <div class="btn-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="btn-user"><i class="fa-solid fa-user"></i></div>
+          <div>
+            <div class="btn-light"><i class="fa-solid fa-sun"> </i></div>
+            <div class="btn-dark"><i class="fa-solid fa-moon"></i></div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="main-content">
+          <div id="all-trending">
+            <div class="trend-img-con"><img class="trend-img" /></div>
+            <div class="btn-container">
+              <button><i class="fa-solid fa-circle-play"></i>Play</button>
+              <button><i class="fa-solid fa-circle-info"></i>More Info</button>
+            </div>
+          </div>
+          <div id="movies">
+            <h1>Movies</h1>
+            <section class="movie-show-container">
+              <h2>Trending</h2>
+              <article class="trending-movies"></article>
+              <h2>Now Playing</h2>
+              <article class="now-playing"></article>
+              <h2>Upcoming</h2>
+              <article class="upcoming"></article>
+            </section>
+          </div>
+          <div id="tv-shows">
+            <h1>Tv Shows</h1>
+            <section class="movie-show-container">
+              <h2>Trending</h2>
+              <article class="trending-tvs"></article>
+              <h2>Top Rated</h2>
+              <article class="top-rated"></article>
+              <h2>Popular</h2>
+              <article class="popular"></article>
+            </section>
+          </div>
+          <div class="modal" style="display: none">
+            <div class="modal-content"></div>
+          </div>
+        </div>
+
+        <div class="search-content"></div>
+      </main>
+
+      <section id="about" class="about-container">
+        <div class="about-info">
+          <h1 class="about-title">About</h1>
+
+          <p>
+            This website provides an up-to-date view of trending movies and TV
+            shows. By pulling real-time data, it showcases what’s popular right
+            now across different media. Users can easily discover new titles,
+            explore details about their favorite shows or films, and stay
+            connected with the latest entertainment trends. Our goal is to make
+            it simple and enjoyable for everyone to keep track of what’s
+            trending in the world of movies and television.
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy 2025 Real Time. All rights reserved.</p>
+        <div class="footer-info">
+          <p>Audio Description</p>
+          <p>Help Center</p>
+          <p>Gift Cars</p>
+          <p>Media Center</p>
+        </div>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./src/js/app.js"></script>
+    <script src="./src/js/event.js"></script>
+  </body>
+</html>

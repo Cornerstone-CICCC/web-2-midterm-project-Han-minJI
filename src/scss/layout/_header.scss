@@ -1,0 +1,120 @@
+@use "../abstracts/variables";
+
+.container {
+  position: relative;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 30px;
+    font-size: 1rem;
+    position: relative;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+
+    &.scrolled {
+      background-color: rgba($color: variables.$st-tropaz, $alpha: 1);
+    }
+
+    .logo {
+      cursor: pointer;
+      h2 {
+        display: none;
+
+        @media (min-width: 768px) {
+          display: block;
+          font-size: 2.5rem;
+        }
+      }
+
+      .logo-icon {
+        display: block;
+        width: 50px;
+
+        @media (min-width: 768px) {
+          display: none;
+        }
+      }
+    }
+
+    nav {
+      menu {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+
+        @media (min-width: 768px) {
+          gap: 40px;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .search-container {
+      display: flex;
+      display: none;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .search-box {
+        background-color: rgba($color: variables.$polo-blue, $alpha: 0.5);
+
+        margin-right: 10px;
+        border: none;
+        border-radius: 15px;
+        width: 250px;
+        padding: 20px 15px;
+        margin-right: 20px;
+
+        font-size: 20px;
+        color: variables.$cloud-burst;
+
+        @media (min-width: 768px) {
+          width: 350px;
+        }
+
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+
+        &::placeholder {
+          color: variables.$magnolia;
+        }
+      }
+
+      .btn-clear {
+        color: variables.$polo-blue;
+        display: inline-block;
+        font-size: 35px;
+      }
+    }
+
+    .search-user {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .btn-dark {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        padding-left: 130px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

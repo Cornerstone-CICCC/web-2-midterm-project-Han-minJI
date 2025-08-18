@@ -1,0 +1,39 @@
+@use "../abstracts/variables";
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  display: none;
+  margin-bottom: 80px;
+
+  scroll-margin-top: 200px;
+
+  .about-info {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid variables.$magnolia;
+    border-radius: 10px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    position: relative;
+
+    @media (min-width: 768px) {
+      max-width: 900px;
+      margin: auto;
+      font-size: 28px;
+      line-height: 45px;
+    }
+
+    .about-title {
+      position: absolute;
+      top: -5%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: variables.$cloud-burst;
+    }
+  }
+}
